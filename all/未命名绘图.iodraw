@@ -32,7 +32,7 @@
           <mxGeometry x="140" y="560" width="220" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MC3" value="LLM响应并解析成功？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="80" y="640" width="160" height="70" as="geometry" />
+          <mxGeometry x="170" y="640" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="MA3_fail" value="回退至默认意图：&lt;br&gt;&quot;health_info_query&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="440" y="660" width="180" height="50" as="geometry" />
