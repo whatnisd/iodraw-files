@@ -163,16 +163,16 @@
           <mxGeometry x="760" y="670" width="400" height="30" as="geometry" />
         </mxCell>
         <mxCell id="S2_start" value="触发条件：旧意图非空 且 旧意图 ≠ 新意图" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="750" y="710" width="280" height="60" as="geometry" />
+          <mxGeometry x="790" y="700" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S2_A1" value="&lt;b&gt;字段清理 (并行)&lt;/b&gt;&lt;br&gt;计算保留集 keep = 基础字段 ∪ 新意图字段&lt;br&gt;从 collected_info 中删除未保留字段" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
-          <mxGeometry x="630" y="800" width="240" height="60" as="geometry" />
+          <mxGeometry x="670" y="790" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S2_A2" value="&lt;b&gt;流程控制重置 (并行)&lt;/b&gt;&lt;br&gt;重置：follow_up_field = None, &lt;br&gt;completed = False, attempts/retry = 0 等" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
-          <mxGeometry x="910" y="800" width="240" height="60" as="geometry" />
+          <mxGeometry x="950" y="790" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="S2_end" value="清理重置完成，返回主流程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="790" y="890" width="200" height="30" as="geometry" />
+          <mxGeometry x="830" y="880" width="200" height="30" as="geometry" />
         </mxCell>
         <mxCell id="E_S2_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="S2_start" target="S2_A1">
           <mxGeometry relative="1" as="geometry" />
