@@ -57,12 +57,13 @@
         <mxCell id="12" value="切换到备 LLM 为主路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="413" y="890" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Hfqq5lbFQVVrVkZI48hs-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="13">
+        <mxCell id="Hfqq5lbFQVVrVkZI48hs-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="370" y="1020" as="targetPoint" />
+            <mxPoint x="375.04" y="1020" as="targetPoint" />
+            <mxPoint x="384.9965217391305" y="765" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="370" y="1000" />
-              <mxPoint x="370" y="1000" />
+              <mxPoint x="385.04" y="893" />
+              <mxPoint x="375.04" y="893" />
             </Array>
           </mxGeometry>
         </mxCell>
