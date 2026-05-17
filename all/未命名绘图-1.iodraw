@@ -69,7 +69,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="13" value="无备路可用&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="650" width="120" height="45" as="geometry" />
+          <mxGeometry x="533" y="602.5" width="120" height="45" as="geometry" />
         </mxCell>
         <mxCell id="14" value="主备均失败&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="840" width="100" height="60" as="geometry" />
