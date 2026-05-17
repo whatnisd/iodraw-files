@@ -74,10 +74,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="E_MC3_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="MC3" target="MA3_fail">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="E_MA3_fail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="MA3_fail" target="M_update">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="675" />
+              <mxPoint x="370" y="675" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="E_M_update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="M_update" target="M4">
           <mxGeometry relative="1" as="geometry" />
