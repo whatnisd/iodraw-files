@@ -20,13 +20,13 @@
           <mxGeometry x="100" y="320" width="300" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MA2_1" value="沿用既有意图&lt;br&gt;更新日志，准备结束" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="440" y="335" width="180" height="50" as="geometry" />
+          <mxGeometry x="490" y="335" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MC2_2" value="2.2 检查：处于信息追问阶段？&lt;br&gt;条件：follow_up非空 且 completed==False" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="100" y="440" width="300" height="80" as="geometry" />
         </mxCell>
         <mxCell id="MA2_2" value="补充分类或保留原意图&lt;br&gt;更新日志，准备结束" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="440" y="455" width="180" height="50" as="geometry" />
+          <mxGeometry x="480" y="455" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="M3" value="3. LLM 分类（兜底）&lt;br&gt;（通过 _FailoverLLMClient 发起请求）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="140" y="560" width="220" height="50" as="geometry" />
