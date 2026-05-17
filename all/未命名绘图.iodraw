@@ -35,7 +35,7 @@
           <mxGeometry x="170" y="640" width="160" height="70" as="geometry" />
         </mxCell>
         <mxCell id="MA3_fail" value="回退至默认意图：&lt;br&gt;&quot;health_info_query&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="440" y="660" width="180" height="50" as="geometry" />
+          <mxGeometry x="480" y="650" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="M_update" value="应用结果至状态，记录日志&lt;br&gt;（检查并触发意图切换清理）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
           <mxGeometry x="140" y="760" width="220" height="50" as="geometry" />
@@ -91,16 +91,6 @@
               <mxPoint x="650" y="245" />
               <mxPoint x="650" y="880" />
             </mxArray>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="E_MA2_1_M4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="MA2_1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="650" y="360" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="E_MA2_2_M4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="MA2_2">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="650" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="S1_title" value="子函数 1：_rule_classify_intent(user_input)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="1">
