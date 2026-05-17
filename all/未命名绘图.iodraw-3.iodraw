@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0" version="24.7.17">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="9483" dy="6607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="12791" dy="8945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,8 +25,14 @@
         <mxCell id="4" value="规则分类 (调用子函数)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="main_container">
           <mxGeometry x="110" y="150" width="140" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="p9KRLIjj1aW2p3DKeJS4-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="main_container" source="5" target="6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="5" value="规则命中?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="main_container">
           <mxGeometry x="110" y="220" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p9KRLIjj1aW2p3DKeJS4-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="main_container" source="6" target="7">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="6" value="更新意图并清理状态" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="main_container">
           <mxGeometry x="110" y="310" width="140" height="40" as="geometry" />
