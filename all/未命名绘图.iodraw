@@ -14,7 +14,7 @@
           <mxGeometry x="180" y="210" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="MA1" value="应用覆盖规则修正&lt;br&gt;直接更新状态，准备结束" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="440" y="220" width="180" height="50" as="geometry" />
+          <mxGeometry x="490" y="220" width="180" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MC2_1" value="2.1 检查：沿用既意图？&lt;br&gt;条件：intent非空 且 user_input为空" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="100" y="320" width="300" height="80" as="geometry" />
