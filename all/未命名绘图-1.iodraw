@@ -41,10 +41,10 @@
         </mxCell>
         <mxCell id="Hfqq5lbFQVVrVkZI48hs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="200" y="840" as="sourcePoint" />
-            <mxPoint x="440" y="920.0434782608697" as="targetPoint" />
+            <mxPoint x="200" y="790" as="sourcePoint" />
+            <mxPoint x="440" y="870.0434782608697" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="200" y="920" />
+              <mxPoint x="200" y="870" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -54,29 +54,33 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="11" value="调用成功?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="810" width="160" height="80" as="geometry" />
+          <mxGeometry x="120" y="760" width="160" height="80" as="geometry" />
         </mxCell>
         <mxCell id="12" value="切换到备 LLM 为主路" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="414" y="820" width="120" height="60" as="geometry" />
+          <mxGeometry x="414" y="770" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Hfqq5lbFQVVrVkZI48hs-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="13">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="380" y="920" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="870" />
+              <mxPoint x="380" y="870" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="13" value="无备路可用&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="320" y="695" width="120" height="45" as="geometry" />
+          <mxGeometry x="320" y="650" width="120" height="45" as="geometry" />
         </mxCell>
         <mxCell id="14" value="主备均失败&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="890" width="100" height="60" as="geometry" />
+          <mxGeometry x="440" y="840" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Hfqq5lbFQVVrVkZI48hs-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="15">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="200" y="910" as="targetPoint" />
+            <mxPoint x="200" y="860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="15" value="结束" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="140" y="930" width="120" height="50" as="geometry" />
+          <mxGeometry x="140" y="880" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="2" target="3">
           <mxGeometry relative="1" as="geometry" />
