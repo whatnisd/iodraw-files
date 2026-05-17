@@ -64,7 +64,7 @@
           <mxGeometry x="290" y="602.5" width="120" height="45" as="geometry" />
         </mxCell>
         <mxCell id="14" value="主备均失败&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="290" y="820" width="100" height="60" as="geometry" />
+          <mxGeometry x="354" y="830" width="90" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Hfqq5lbFQVVrVkZI48hs-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="15">
           <mxGeometry relative="1" as="geometry">
