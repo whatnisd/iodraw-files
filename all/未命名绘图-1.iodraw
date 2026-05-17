@@ -39,10 +39,12 @@
         <mxCell id="10" value="调用备 LLM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="140" y="780" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Hfqq5lbFQVVrVkZI48hs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1" source="11" target="14">
+        <mxCell id="Hfqq5lbFQVVrVkZI48hs-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="890" as="sourcePoint" />
+            <mxPoint x="440" y="970.0434782608697" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="200" y="1020" />
+              <mxPoint x="200" y="970" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -70,7 +72,7 @@
           <mxGeometry x="320" y="720" width="120" height="45" as="geometry" />
         </mxCell>
         <mxCell id="14" value="主备均失败&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="440" y="1000" width="100" height="60" as="geometry" />
+          <mxGeometry x="440" y="940" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Hfqq5lbFQVVrVkZI48hs-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="15">
           <mxGeometry relative="1" as="geometry">
