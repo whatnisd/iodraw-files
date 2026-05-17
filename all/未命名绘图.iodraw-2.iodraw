@@ -1,135 +1,203 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0" version="24.7.17">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1427" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4907" dy="3862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="start" value="开始" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="320" y="40" width="120" height="50" as="geometry" />
+        <mxCell id="P1_title" value="阶段一：LLM 客户端初始化（init_llm_client）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60" y="15" width="400" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="start" target="env">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="I0" value="0. 开始&lt;br&gt;加载 .env 环境变量" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="50" width="220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="env" value="加载 .env 环境变量" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="260" y="120" width="240" height="60" as="geometry" />
+        <mxCell id="IC_groq" value="检查 GROQ_API_KEY 存在？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="120" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="env" target="groq_init">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IA_groq_init" value="调用 init_chat_model()&lt;br&gt;模型: groq:openai/gpt-oss-120b&lt;br&gt;temp=0.1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="210" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="groq_init" value="初始化 Groq" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="290" y="220" width="180" height="50" as="geometry" />
+        <mxCell id="IC_groq_res" value="Groq 初始化成功？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="170" y="290" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_init" target="groq_key">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IA_groq_ok" value="记录 clients[&quot;Groq&quot;]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="180" y="380" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="groq_key" value="GROQ_API_KEY&lt;br&gt;是否存在?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="280" y="320" width="200" height="90" as="geometry" />
+        <mxCell id="IA_groq_fail" value="记录失败/错误日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="10" y="295" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="edge4" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_key" target="groq_fail">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IC_ds" value="检查 DEEPSEEK_API_KEY 存在？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="140" y="440" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="groq_fail" value="记录失败日志" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="20" y="340" width="160" height="50" as="geometry" />
+        <mxCell id="IA_ds_init" value="读取环境变量 Model 和 Base_URL&lt;br&gt;调用 init_chat_model()&lt;br&gt;模型: openai:{model}" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="140" y="530" width="220" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="edge5" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_key" target="groq_model">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IC_ds_res" value="DeepSeek 初始化成功？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="165" y="615" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="groq_model" value="调用 init_chat_model&lt;br&gt;groq:openai/gpt-oss-120b" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="560" y="320" width="260" height="80" as="geometry" />
+        <mxCell id="IA_ds_ok" value="记录 clients[&quot;DeepSeek&quot;]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="175" y="705" width="150" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="edge6" value="成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_model" target="groq_success">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IA_ds_fail" value="记录失败/错误日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="10" y="620" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="groq_success" value="clients[Groq]&lt;br&gt;= 客户端实例" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="900" y="280" width="220" height="70" as="geometry" />
+        <mxCell id="IC_role" value="确定主备角色分流" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="165" y="765" width="170" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="edge7" value="失败" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_model" target="groq_error">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IA_r1" value="Groq 成功：&lt;br&gt;主路 = Groq&lt;br&gt;备路 = DeepSeek (若成功)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="10" y="860" width="155" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="groq_error" value="记录错误日志" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="900" y="380" width="180" height="50" as="geometry" />
+        <mxCell id="IA_r2" value="仅 DeepSeek 成功：&lt;br&gt;主路 = DeepSeek&lt;br&gt;备路 = None" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="180" y="860" width="140" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_success" target="deepseek_init">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="IA_r3" value="均失败：&lt;br&gt;返回 None&lt;br&gt;(全局LLM不可用，自动降级本地回复)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="340" y="860" width="190" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_error" target="deepseek_init">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="I_wrap" value="实例化包装类&lt;br&gt;_FailoverLLMClient(primary, backup)&lt;br&gt;赋值给全局变量 llm_client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="960" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="groq_fail" target="deepseek_init">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="I_end" value="初始化结束" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="140" y="1050" width="220" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="deepseek_init" value="初始化 DeepSeek" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="320" width="200" height="60" as="geometry" />
+        <mxCell id="E_I0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="I0" target="IC_groq" />
+        <mxCell id="E_IC_groq_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_groq" target="IA_groq_init" />
+        <mxCell id="E_IC_groq_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IC_groq" target="IA_groq_fail">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="65" y="150" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="deepseek_init" target="deepseek_key">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="E_IA_groq_init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="IA_groq_init" target="IC_groq_res" />
+        <mxCell id="E_IC_groq_res_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_groq_res" target="IA_groq_ok" />
+        <mxCell id="E_IC_groq_res_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_groq_res" target="IA_groq_fail" />
+        <mxCell id="E_IA_groq_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_groq_ok" target="IC_ds" />
+        <mxCell id="E_IA_groq_fail_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_groq_fail" target="IC_ds">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="65" y="470" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="deepseek_key" value="DEEPSEEK_API_KEY&lt;br&gt;是否存在?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="1270" y="450" width="220" height="90" as="geometry" />
+        <mxCell id="E_IC_ds_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_ds" target="IA_ds_init" />
+        <mxCell id="E_IC_ds_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IC_ds" target="IA_ds_fail">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="65" y="470" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="invoke_start" value="invoke 调用开始" style="ellipse;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="620" y="760" width="180" height="60" as="geometry" />
+        <mxCell id="E_IA_ds_init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="IA_ds_init" target="IC_ds_res" />
+        <mxCell id="E_IC_ds_res_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_ds_res" target="IA_ds_ok" />
+        <mxCell id="E_IC_ds_res_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_ds_res" target="IA_ds_fail" />
+        <mxCell id="E_IA_ds_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_ds_ok" target="IC_role" />
+        <mxCell id="E_IA_ds_fail_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_ds_fail" target="IC_role">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="65" y="795" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="invoke_edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="invoke_start" target="active_lock">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="E_IC_role_1" value="Groq成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_role" target="IA_r1" />
+        <mxCell id="E_IC_role_2" value="仅DS成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_role" target="IA_r2" />
+        <mxCell id="E_IC_role_3" value="全部失败" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="IC_role" target="IA_r3" />
+        <mxCell id="E_IA_r1_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_r1" target="I_wrap">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="88" y="990" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="active_lock" value="获取当前活跃客户端&lt;br&gt;使用互斥锁保护" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="540" y="860" width="320" height="80" as="geometry" />
+        <mxCell id="E_IA_r2_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_r2" target="I_wrap" />
+        <mxCell id="E_IA_r3_join" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IA_r3" target="I_end">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="435" y="1070" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="invoke_edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="active_lock" target="invoke_call">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="E_I_wrap" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="I_wrap" target="I_end" />
+        <mxCell id="P2_title" value="阶段二：故障转移调用（_FailoverLLMClient.invoke）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="640" y="15" width="400" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_call" value="调用 active_client.invoke" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="560" y="980" width="280" height="60" as="geometry" />
+        <mxCell id="C0" value="开始：接收参数 (*args, **kwargs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="50" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge3" value="成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="invoke_call" target="invoke_success">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="C1" value="获取当前活跃客户端（线程安全）&lt;br&gt;使用互斥锁（self._lock）保护&lt;br&gt;读取 active_name, active_client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="120" width="240" height="55" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_success" value="返回结果" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="940" y="980" width="160" height="50" as="geometry" />
+        <mxCell id="C2" value="调用活跃客户端&lt;br&gt;执行 active_client.invoke(...)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="210" width="240" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge4" value="失败" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="invoke_call" target="invoke_exception">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CC_invoke" value="调用成功？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="285" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_exception" value="捕获异常" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="560" y="1100" width="180" height="50" as="geometry" />
+        <mxCell id="CA_ret1" value="直接返回结果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="295" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="invoke_exception" target="backup_check">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CC_failover" value="捕获异常：&lt;br&gt;当前活跃是主路 且 备路存在？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="770" y="380" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="backup_check" value="当前是否为主路&lt;br&gt;且备路存在?" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="520" y="1220" width="240" height="100" as="geometry" />
+        <mxCell id="CA_err1" value="直接抛出异常（不切换）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="395" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge6" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="backup_check" target="throw_exception">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CA_switch_log" value="触发备路切换&lt;br&gt;记录警告日志：“主LLM调用失败，尝试切换到备份”" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="755" y="485" width="250" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="throw_exception" value="直接抛出异常" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="220" y="1245" width="180" height="50" as="geometry" />
+        <mxCell id="C3" value="调用备路客户端&lt;br&gt;执行 self._backup_client.invoke(...)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="560" width="240" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge7" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="backup_check" target="switch_log">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CC_backup" value="备路调用成功？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="635" width="140" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="switch_log" value="记录警告日志&lt;br&gt;尝试切换到备份" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="900" y="1230" width="260" height="70" as="geometry" />
+        <mxCell id="CA_err2" value="抛出异常（主备均失败）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="645" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="switch_log" target="backup_invoke">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CA_lock_update" value="使用互斥锁（self._lock）&lt;br&gt;永久更新活跃状态：&lt;br&gt;self._active_name = backup_name&lt;br&gt;self._active_client = backup_client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="765" y="730" width="230" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="backup_invoke" value="调用 backup_client.invoke" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="920" y="1360" width="240" height="60" as="geometry" />
+        <mxCell id="CA_switch_ok_log" value="记录警告日志：“LLM已永久切换到备份提供商”" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="755" y="830" width="250" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge9" value="成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="backup_invoke" target="switch_done">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="CA_ret2" value="返回备路调用结果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="810" y="895" width="140" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="switch_done" value="更新 active_client&lt;br&gt;切换到备份提供商" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="1345" width="260" height="80" as="geometry" />
+        <mxCell id="C_end" value="结束" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="760" y="970" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="invoke_edge10" value="失败" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;strokeWidth=1;" edge="1" parent="1" source="backup_invoke" target="all_fail">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="E_C0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="C0" target="C1" />
+        <mxCell id="E_C1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="C1" target="C2" />
+        <mxCell id="E_C2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="C2" target="CC_invoke" />
+        <mxCell id="E_CC_invoke_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_invoke" target="CA_ret1" />
+        <mxCell id="E_CC_invoke_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_invoke" target="CC_failover" />
+        <mxCell id="E_CC_failover_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_failover" target="CA_err1" />
+        <mxCell id="E_CC_failover_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_failover" target="CA_switch_log" />
+        <mxCell id="E_CA_switch_log" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_switch_log" target="C3" />
+        <mxCell id="E_C3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="C3" target="CC_backup" />
+        <mxCell id="E_CC_backup_N" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_backup" target="CA_err2" />
+        <mxCell id="E_CC_backup_Y" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="CC_backup" target="CA_lock_update" />
+        <mxCell id="E_CA_lock_update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_lock_update" target="CA_switch_ok_log" />
+        <mxCell id="E_CA_switch_ok_log" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_switch_ok_log" target="CA_ret2" />
+        <mxCell id="E_CA_ret1_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CA_ret1" target="C_end">
+          <mxGeometry relative="1" as="geometry">
+            <mxArray as="points">
+              <mxPoint x="1240" y="315" />
+              <mxPoint x="1240" y="990" />
+            </mxArray>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="all_fail" value="主备均失败&lt;br&gt;抛出异常" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;strokeWidth=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="920" y="1480" width="220" height="70" as="geometry" />
+        <mxCell id="E_CA_err1_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_err1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="415" as="sourcePoint" />
+            <mxPoint x="1240" y="500" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
+        <mxCell id="E_CA_err2_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_err2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="665" as="sourcePoint" />
+            <mxPoint x="1240" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E_CA_ret2_end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#000000;endArrow=block;" edge="1" parent="1" source="CA_ret2" target="C_end" />
       </root>
     </mxGraphModel>
   </diagram>
